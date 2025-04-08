@@ -8,3 +8,5 @@ plugins=(git colorize command-not-found tmux docker docker-compose doctl dotenv 
 source $ZSH/oh-my-zsh.sh
 export CC=clang-19
 export CXX=clang++-19
+alias spdk-up='sudo modprobe uio_pci_generic && sudo /usr/local/bin/spdk/scripts/setup.sh'
+alias spdk-down='sudo /usr/local/bin/spdk/scripts/setup.sh reset && sudo /usr/local/bin/spdk/scripts/setup.sh cleanup'
